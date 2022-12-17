@@ -6,7 +6,7 @@ var card_title = document.querySelector(".card-title");
 var cards_desc = document.querySelector(".card-text");
 var container = document.querySelector(".container");
 writingform.style.display = "none"
-// cards.style.display = "none"
+
 btn.addEventListener("click", () => {
   writingform.style.display = "block";
   container.style.display = "none";
@@ -21,14 +21,12 @@ if(localStorage.getItem("Mydiary")==null){
 newbtn.addEventListener("click", () => {
  
   var date = document.querySelector("#datetxt").value;
-  // console.log(date);
+ 
 
   var titletxt = document.getElementById("title").value;
-  // console.log(titletxt);
-  // arr[1]=titletxt
+ 
   var txtarea = document.querySelector("#txtarea").value;
-  // console.log(txtarea);
-  // arr[2]=txtarea;
+  
 
  var  obj = {
     date: `${date}`,
@@ -39,8 +37,7 @@ newbtn.addEventListener("click", () => {
   arr = JSON.parse(localStorage.getItem("Mydiary")) ;
   arr.push(obj)
   localStorage.setItem("Mydiary",JSON.stringify(arr))
-// console.log(arr);
-  
+
 
 
  
@@ -51,8 +48,7 @@ newbtn.addEventListener("click", () => {
     <h5 class="card-title">${date}</h5>
     <p class="card-text">${titletxt}</p>
     <p class="card-text">${txtarea}</p>
-    <button class="btn btn-primary" onclick="btnclick()">Delete</button>
-
+   
     </div>
     </div>`
   cards.style.display = "block"
@@ -92,8 +88,7 @@ if(localStorage.getItem("Mydiary")!=null){
     container.style.display = "block"
 
 
-  console.log("Event fired");
-
+  
 }
 
 
